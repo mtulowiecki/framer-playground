@@ -4,10 +4,12 @@ import MainTemplate from 'templates/MainTemplate/MainTemplate';
 
 import UserTemplate from 'templates/UserTemplate/UserTemplate';
 import Home from 'views/Home';
-import Swipe from 'views/Swipe';
-import Loaders from 'views/Loaders';
-import AnimationProps from 'views/AnimationProps';
 import ThemeToggle from 'views/ThemeToggle';
+import Blob from 'views/Blob';
+// import Todo from 'views/Todo';
+import Loaders from 'views/Loaders';
+import Swipe from 'views/Swipe';
+import AnimationProps from 'views/AnimationProps';
 
 const items = [
   {
@@ -20,6 +22,11 @@ const items = [
     slug: 'theme-toggle',
     color: '#F86725',
   },
+  // {
+  //   title: 'To-Do List',
+  //   slug: 'to-do',
+  //   color: '#F9C80D',
+  // },
   {
     title: 'Loaders',
     slug: 'loaders',
@@ -28,6 +35,11 @@ const items = [
   {
     title: 'Swipe gallery',
     slug: 'swipe',
+    color: '#EB3547',
+  },
+  {
+    title: 'Organic blob',
+    slug: 'blob',
     color: '#EB3547',
   },
   {
@@ -43,10 +55,12 @@ const Root = () => {
       <UserTemplate items={items}>
         <Router style={{ height: '100%' }}>
           <Home path="/" />
-          <Swipe path="/swipe" />
-          <Loaders path="/loaders" />
-          <AnimationProps path="/animation-props" />
           <ThemeToggle path="/theme-toggle" />
+          <Blob path="/blob" />
+          {/* <Todo path="/to-do" /> */}
+          <Loaders path="/loaders" />
+          <Swipe path="/swipe" />
+          <AnimationProps path="/animation-props" />
         </Router>
       </UserTemplate>
     </MainTemplate>

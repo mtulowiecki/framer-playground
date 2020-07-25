@@ -36,7 +36,6 @@ const Card = ({ content, color, onToggleFocus }) => {
       <CardWrapper
         color={color}
         onTap={() => {
-          console.log('dupa');
           onToggleFocus();
           cycleCard();
         }}
